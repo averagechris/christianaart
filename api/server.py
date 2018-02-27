@@ -11,7 +11,7 @@ app.static('/service-worker.js', '{}/service-worker.js'.format(BUILT_DIR))
 
 @app.route('/')
 async def root(request):
-    return await response.file('./build/index.html')
+    return await response.file('{}/index.html'.format(BUILT_DIR))
 
 @app.route('/api')
 async def api(request):
